@@ -1,0 +1,20 @@
+#set($a="Welcome")
+$a
+<b>$name</b> <br>
+Your Email is <b>$email</b>
+<br>
+Generated Random Number is in RED
+#set($i=10)
+#foreach($i in [1..10])
+<b 
+#if($i==$random)
+style="color:red;"
+#else
+style="color:green;"
+#end >$i</b>&nbsp;
+#set($i=$i+1)
+#end
+<br>Check if user is  Admin
+#if($name=="Admin")
+<b>User is Admin</b>
+#end
