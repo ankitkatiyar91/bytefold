@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
 			{
 				//echo "image $counter is valid temp path : ".$image_data['tmp_name']." actual path: images/".$image_data['name'];
 				//generate a unique file name
-				$fileName = 'new_arrivals_' . ($counter+1).'_'.$image_data['name'];
+				$fileName = $imageNamePrefix . ($counter+1).'_'.$image_data['name'];
 				$uploaded = move_uploaded_file($image_data['tmp_name'], $fileDirectory.$fileName);
 				if($uploaded){
 					$imagesUpdated[$counter]=$fileName;
